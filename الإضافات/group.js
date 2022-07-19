@@ -19,7 +19,7 @@ const {
     Module
 } = require('../main')
 Module({
-    pattern: 'kick ?(.*)',
+    pattern: 'طرد ?(.*)',
     fromMe: true,
     desc: Lang.KICK_DESC,
     use: 'group'
@@ -65,7 +65,7 @@ Module({
     await message.client.groupParticipantsUpdate(message.jid, [user], "remove")
 }))
 Module({
-    pattern: 'add ?(.*)',
+    pattern: 'اضافه ?(.*)',
     fromMe: true,
     desc: Lang.ADD_DESC,
     use: 'group'
@@ -80,7 +80,7 @@ Module({
     await message.client.groupAdd(user,message)
 }))
 Module({
-    pattern: 'promote ?(.*)',
+    pattern: 'ترقيه ?(.*)',
     fromMe: true,
     use: 'group',
     desc: Lang.PROMOTE_DESC
@@ -105,7 +105,7 @@ Module({
     return await message.client.groupLeave(message.jid);
 }))
 Module({
-    pattern: 'demote ?(.*)',
+    pattern: 'اقاله ?(.*)',
     fromMe: true,
     use: 'group',
     desc: Lang.DEMOTE_DESC
@@ -241,7 +241,7 @@ msg += "```"+s.id.split("@")[0]+"``` \n"
 return await message.sendReply(msg)
 }));
 Module({
-    pattern: 'tagall',
+    pattern: 'منشن',
     fromMe: true,
     desc: Lang.TAGALL_DESC,
     use: 'group'
@@ -261,7 +261,8 @@ Module({
     })
 }))
 Module({
-    pattern: 'tagadmin',
+    pattern: 'ل 
+',
     fromMe: true,
     desc: Lang.TAGALL_DESC,
     dontAddCommandList: true,
